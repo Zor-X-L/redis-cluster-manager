@@ -1,0 +1,8 @@
+{
+  "replicas": 1,
+  "port_range_start": 7000,
+  "network": "127.0.0.0/8",
+  "host_to_num_nodes": {
+    "127.0.0.1": 6
+  }
+}
