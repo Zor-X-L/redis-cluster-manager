@@ -6,8 +6,8 @@ exec(open('common.py').read())
 
 args = ['./redis-trib.rb', 'create', '--replicas', str(config['replicas'])]
 
-for host, num_nodes in config['host_to_num_nodes'].items():
-    for port in range(port_range_start, port_range_start + num_nodes):
+for host in config['hosts']:
+    for port in range(port_range_start, port_range_end):
         args.append(host + ':' + str(port))
 
 subprocess.call(args)
